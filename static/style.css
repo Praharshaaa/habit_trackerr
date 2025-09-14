@@ -1,0 +1,129 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #1abc9c;
+    margin-bottom: 20px;
+}
+
+/* Add Habit form styling */
+form {
+    background-color: #3b4a59;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+form h2 {
+    text-align: center;
+    color: #1abc9c;
+    margin-bottom: 15px;
+}
+
+form input[type="text"],
+form input[type="time"],
+form button {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form input[type="text"],
+form input[type="time"] {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    border: 1px solid #1abc9c;
+}
+
+form input[type="text"]::placeholder,
+form input[type="time"]::placeholder {
+    color: #bdc3c7;
+}
+
+form button {
+    background-color: #1abc9c;
+    color: #2c3e50;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #16a085;
+}
+
+/* View Habits styling remains the same */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #3b4a59;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ul li strong {
+    font-size: 1.2em;
+    color: #1abc9c;
+}
+
+ul li button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+ul li button:hover {
+    background-color: #2980b9;
+}
+
+/* Flash messages styling remains unchanged */
+ul.flashes {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+ul.flashes li.success {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+ul.flashes li.error {
+    background-color: #c0392b;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+ul.flashes li.info {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+

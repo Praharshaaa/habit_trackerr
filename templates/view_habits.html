@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Your Habits</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Your Habits</h1>
+
+    <div class="nav-links">
+        <a href="{{ url_for('index') }}">Add Habit</a>
+    </div>
+
+    <ul>
+        {% for habit in habits %}
+            <li>
+                <strong>{{ habit.name }}</strong><br>
+                {{ habit.description }}<br>
+                Reminder: {{ habit.reminder_time }}<br>
+                Streak: {{ streaks.get(habit.id, 0) }}<br>
+                <form action="{{ url_for('complete_habit', habit_id=habit.id) }}" method="POST">
+                    <button type="submit">Complete</button>
+                </form>
+            </li>
+        {% else %}
+            <li>No habits added yet!</li>
+        {% endfor %}
+    </ul>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</body>
+</html>
